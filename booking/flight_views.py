@@ -26,14 +26,14 @@ class faq_update(generics.RetrieveUpdateDestroyAPIView):
 
 def flights(request):
     if request.method=="GET":
-        ad=requests.get("http://127.0.0.1:8000/flight_home/")
-        res=ad.json()
-        k=requests.get('http://127.0.0.1:8000/faqsapi/')
-        rest=k.json()
-        wc = requests.get("http://127.0.0.1:8000/why_choose_lc/")
-        wcu = wc.json()
-        ch = requests.get("http://127.0.0.1:8000/choose_us/")
-        wch = ch.json()      
+        # ad=requests.get("http://127.0.0.1:8000/flight_home/")
+        res=flights_offercards.objects.all() # ad.json()
+        # k=requests.get('http://127.0.0.1:8000/faqsapi/')
+        rest=faqs.objects.all() # k.json()
+        # wc = requests.get("http://127.0.0.1:8000/why_choose_lc/")
+        wcu = why_choose.objects.all() # wc.json()
+        # ch = requests.get("http://127.0.0.1:8000/choose_us/")
+        wch = choosing_content.objects.all() # ch.json()      
         return render(request,"flight_templates/c.html",{'res':res,'rest':rest,'wcu':wcu,'wch':wch})
 
 
