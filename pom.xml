@@ -48,3 +48,25 @@
         </plugins>
     </build>
 </project>
+
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" ...>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example</groupId>
+    <artifactId>your-web-app</artifactId>
+    <version>1.0</version>
+    <packaging>war</packaging> <!-- Set packaging type to WAR -->
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.2</version>
+                <configuration>
+                    <!-- Configure WAR plugin options if needed -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
